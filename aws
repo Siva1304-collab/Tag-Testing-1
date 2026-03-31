@@ -1,0 +1,41 @@
+Connect Info
+Connect to an instance using the browser-based client.
+
+Instance ID
+
+i-04b356359eb1f01d7 (Git)
+VPC ID
+vpc-043b833554e304e68
+Security groups
+sg-06f1555e0fd2977be (my-new-SG)
+IAM role
+–
+
+EC2 Instance Connect
+
+SSM Session Manager
+
+SSH client
+
+EC2 serial console
+Instance ID
+
+i-04b356359eb1f01d7 (Git)
+Open an SSH client.
+
+Locate your private key file. The key used to launch this instance is New-key_pair.pem
+
+Run this command, if necessary, to ensure your key is not publicly viewable.
+chmod 400 "New-key_pair.pem"
+
+Connect to your instance using its Public DNS:
+ec2-98-92-241-76.compute-1.amazonaws.com
+
+Example:
+
+
+Command copied
+ssh -i "New-key_pair.pem" ec2-user@ec2-98-92-241-76.compute-1.amazonaws.com
+Note: In most cases, the guessed username is correct. However, read your AMI usage instructions to check if the AMI owner has changed the default AMI username.
+Cancel
+Command copied
